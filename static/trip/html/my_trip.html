@@ -1,0 +1,170 @@
+<script type="text/javascript" src="/static/trip/js/my_trip.js"></script>
+<button id="add_trip_btn" class="btn btn-outline-success mb-2" data-toggle="modal" data-target="#exampleModal">Add Trip</button>
+
+<div class="modal fade" style="margin-top:0%;" id="trip_details_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Trip Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <label>From Country:</label>
+            <label type="text" id="modal_from_loc_country" class="form-control" placeholder="From Country">
+          </div>
+          <div class="col">
+            <label>From State:</label>
+            <label type="text" id="modal_from_loc_state" class="form-control" placeholder="From State">
+          </div>
+          <div class="col">
+            <label>From City:</label>
+            <label type="text" id="modal_from_loc_city" class="form-control" placeholder="From City">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <label>To Country:</label>
+            <label type="text" id="modal_to_loc_country" class="form-control" placeholder="To Country">
+          </div>
+          <div class="col">
+            <label>To State:</label>
+            <label type="text" id="modal_to_loc_state" class="form-control" placeholder="To State">
+          </div>
+          <div class="col">
+            <label>To City:</label>
+            <label type="text" id="modal_to_loc_city" class="form-control" placeholder="To City">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <label>Capacity:</label>
+            <label type="number" id="modal_capacity" class="form-control" placeholder="Capacity">
+          </div>
+          <div class="col">
+            <label>First Name:</label>
+            <labbel type="number" id="modal_first_name" class="form-control" placeholder="First Name">
+          </div>
+          <div class="col">
+            <label>Last Name:</label>
+            <label type="number" id="modal_last_name" class="form-control" placeholder="Last Name">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <label>Email:</label>
+            <label id="modal_email" type="text" class="form-control" placeholder="Email"></label>
+          </div>
+        </div>
+        <div class="row" style="height:50%;overflow-y:scroll;">
+          <div class="col" id="trip_member_holder">
+            <label>Trip Members</label>
+            <label class="form-control">First Last 9793291555</label>
+            <label class="form-control">First Last 9793291555</label>
+            <label class="form-control">First Last 9793291555</label>
+            <label class="form-control">First Last 9793291555</label>
+            <label class="form-control">First Last 9793291555</label>
+            <label class="form-control">First Last 9793291555</label>
+            <label class="form-control">First Last 9793291555</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" style="margin-top:20%;" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Trip</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <input type="text" id="from_loc_country" class="form-control" placeholder="From Country">
+          </div>
+          <div class="col">
+            <input type="text" id="from_loc_state" class="form-control" placeholder="From State">
+          </div>
+          <div class="col">
+            <input type="text" id="from_loc_city" class="form-control" placeholder="From City">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <input type="text" id="to_loc_country" class="form-control" placeholder="To Country">
+          </div>
+          <div class="col">
+            <input type="text" id="to_loc_state" class="form-control" placeholder="To State">
+          </div>
+          <div class="col">
+            <input type="text" id="to_loc_city" class="form-control" placeholder="To City">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <input type="number" id="capacity" class="form-control" placeholder="Capacity">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline-success" id="create_trip_btn">Add Trip</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">From Country</th>
+      <th scope="col">From State</th>
+      <th scope="col">From City</th>
+      <th scope="col">To Country</th>
+      <th scope="col">To State</th>
+      <th scope="col">To City</th>
+      <th scope="col">Capacity</th>
+    </tr>
+  </thead>
+  <tbody id="trip_data">
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+<div style="font-size:x-large;">
+  <i class="fas fa-arrow-left" id="trip_prev_btn" style="cursor:pointer;" onClick="get_all_trips(0,4)"></i>
+  <i class="fas fa-arrow-right" id="trip_next_btn" style="margin-left:95%;cursor:pointer;" onClick="get_all_trips(4,8)"></i>
+</div>
